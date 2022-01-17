@@ -1,0 +1,26 @@
+enum Team {
+	blue
+	red
+}
+
+input PersonInput {
+	team: Team!
+	name: String!
+	age: Int!
+	phone: String!
+}
+
+type Mutation {
+	createPerson(person: PersonInput): Person
+}
+
+type Person {
+	team: Team!
+	name: String!
+	age: Int!
+	phone: String!
+}
+
+type Query {
+	getPeople: [Person!]!
+}

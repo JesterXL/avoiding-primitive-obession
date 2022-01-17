@@ -1,0 +1,24 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "compile1": "npx tsc --module es2020 index1.ts",
+    "start1": "npm run compile1 && node index1.js",
+    "compile2": "npx tsc --module es2020 index2.ts",
+    "start2": "npm run compile2 && node index2.js",
+    "compile3": "npx tsc --module es2020 index3.ts",
+    "start3": "npm run compile3 && node index3.js",
+    "compile4": "npx tsc --module es2020 index4.ts",
+    "start4": "npm run compile4 && node index4.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "typescript": "^4.5.4"
+  }
+}
