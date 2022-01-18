@@ -1,0 +1,26 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "logs:DescribeLogStreams"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:logs:us-east-1:010101010101:*"
+      ]
+    },
+    {
+      "Action": [
+        "logs:PutLogEvents",
+        "logs:CreateLogStream",
+        "logs:CreateLogGroup"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:logs:us-east-1:010101010101:log-group:/aws/lambda/validateJWT",
+        "arn:aws:logs:us-east-1:010101010101:log-group:/aws/lambda/validateJWT:log-stream:*"
+      ]
+    }
+  ],
+  "Version": "2012-10-17"
+}

@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "logs:DescribeLogStreams",
+            "Resource": "arn:aws:logs:us-east-1:<ACCOUNT-ID>:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:PutLogEvents",
+                "logs:CreateLogStream",
+                "logs:CreateLogGroup"
+            ],
+            "Resource": [
+                "arn:aws:logs:us-east-1:<ACCOUNT-ID>:log-group:/aws/lambda/<LAMBDA-FUNCTION-NAME>",
+                "arn:aws:logs:us-east-1:<ACCOUNT-ID>:log-group:/aws/lambda/<LAMBDA-FUNCTION-NAME>:log-stream:*",
+            ]
+        }
+    ]
+}
